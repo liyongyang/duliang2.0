@@ -2,7 +2,8 @@
   <section>
     <h2 class="section-title">autowise.ai——环卫自动驾驶方案提供者</h2>
     <div class="block">
-      <el-image :src="src">
+      <el-image class="banner-img"
+                :src="src">
         <div slot="placeholder"
              class="image-slot">
           加载中<span class="dot">...</span>
@@ -32,5 +33,11 @@ export default {
   color: #333333;
   line-height: 45px;
   letter-spacing: 2px;
+}
+.banner-img {
+  border-radius: 14px;
+  box-shadow: #6c7cd3 1px 3px 20px;
+  /* -webkit-transition: 0.3s; */
+  /* transition: 0.3s; */
 }
 </style>
