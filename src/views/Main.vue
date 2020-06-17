@@ -37,7 +37,5 @@ export default {
 .banner-img {
   border-radius: 14px;
   box-shadow: #6c7cd3 1px 3px 20px;
-  /* -webkit-transition: 0.3s; */
-  /* transition: 0.3s; */
 }
 </style>

@@ -161,6 +161,7 @@
           <div id="typeChoose">
             <el-cascader :options="cause_type"
                          :props="{ expandTrigger: 'hover' }"
+                         v-model="curr_type"
                          @change="causeType">
             </el-cascader>
           </div>
@@ -201,6 +202,7 @@ export default {
       index_cause_type: [],
       editFormVisible: false,//编辑界面是否显示
       //编辑界面数据
+      curr_type: '',
       editForm: {
         id: 0,
         es_start: '',
@@ -323,7 +325,7 @@ export default {
         .then(function (data) {
           // console.log(data)
           that.editFormVisible = false;
-
+          that.curr_type = ''
           that.getData()
           that.$message({
             message: '提交成功',

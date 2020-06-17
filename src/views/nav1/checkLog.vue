@@ -86,7 +86,7 @@ export default {
           }
         )
         .then(function (data) {
-          // console.log(data.data)
+          console.log(data.data)
           that.tableData = data.data.datas
           // console.log(that.tableData)
           // for (let i = 0; i < data.datas.length; i++) {

@@ -5,9 +5,9 @@ import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
 import chartsInfo from './views/nav1/chartsInfo.vue'
-import Page4 from './views/nav2/Page4.vue'
+import repair from './views/nav2/repair.vue'
 import Page5 from './views/nav2/Page5.vue'
-import Page6 from './views/nav3/Page6.vue'
+import warehouse from './views/nav3/warehouse.vue'
 import echarts from './views/charts/echarts.vue'
 
 let routes = [
@@ -23,12 +23,12 @@ let routes = [
     name: '',
     hidden: true
   },
-  //{ path: '/main', component: Main },
+  // { path: '/main', component: Main },
   {
     path: '/',
     component: Home,
     name: '车辆运营',
-    iconCls: 'el-icon-edit-outline',//图标样式class
+    iconCls: 'fa fa-car',//图标样式class
     children: [
       { path: '/main', component: Main, name: '主页' },
       { path: '/table', component: Table, name: '表单' },
@@ -36,35 +36,38 @@ let routes = [
       { path: '/chartsInfo', component: chartsInfo, name: '图表' },
     ]
   },
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   name: '导航二',
-  //   iconCls: 'fa fa-id-card-o',
-  //   children: [
-  //     { path: '/page4', component: Page4, name: '页面4' },
-  //     { path: '/page5', component: Page5, name: '页面5' }
-  //   ]
-  // },
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   name: '',
-  //   iconCls: 'fa fa-address-card',
-  //   leaf: true,//只有一个节点
-  //   children: [
-  //     { path: '/page6', component: Page6, name: '导航三' }
-  //   ]
-  // },
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   name: 'Charts',
-  //   iconCls: 'fa fa-bar-chart',
-  //   children: [
-  //     { path: '/echarts', component: echarts, name: 'echarts' }
-  //   ]
-  // },
+  {
+    path: '/',
+    component: Home,
+    name: '车辆工程',
+    hidden: true,
+    iconCls: 'fa fa-gears',
+    children: [
+      { path: '/repair', component: repair, name: '车辆维修' },
+      { path: '/page5', component: Page5, name: '页面5', hidden: true }
+    ]
+  },
+  {
+    path: '/',
+    component: Home,
+    name: '',
+    hidden: true,
+    iconCls: 'fa fa-shopping-cart',
+    leaf: true,//只有一个节点
+    children: [
+      { path: '/warehouse', component: warehouse, name: '物料仓库' }
+    ]
+  },
+  {
+    path: '/',
+    component: Home,
+    name: 'MORE +',
+    hidden: true,
+    iconCls: 'fa fa-spinner',
+    children: [
+      { path: '/echarts', component: echarts, name: 'echarts' }
+    ]
+  },
   {
     path: '*',
     hidden: true,

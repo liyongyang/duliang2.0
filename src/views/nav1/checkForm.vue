@@ -205,7 +205,7 @@ export default {
     },
     form () {
       return this.form
-      // console.log(this.form)
+      console.log(this.form)
     }
   },
   // 方法
