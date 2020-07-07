@@ -10,9 +10,11 @@ import echarts from 'echarts'
 import VueRouter from 'vue-router'
 import store from './vuex/store'
 import Vuex from 'vuex'
-//import NProgress from 'nprogress'
+// import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
+// import Mock from './mock'
+// Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
 
 Vue.use(VueAxios, axios)
@@ -39,9 +41,9 @@ const router = new VueRouter({
 //   }
 // })
 
-//router.afterEach(transition => {
-//NProgress.done();
-//});
+// router.afterEach(transition => {
+//   NProgress.done();
+// });
 
 new Vue({
   //el: '#app',

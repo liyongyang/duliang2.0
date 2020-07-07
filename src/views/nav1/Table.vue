@@ -39,7 +39,7 @@
 
       <el-table ref="filterTable"
                 v-loading="loading"
-                height="725"
+                height="745"
                 element-loading-text="拼命加载中"
                 element-loading-spinner="el-icon-loading"
                 element-loading-background="rgba(0, 0, 0, 0.8)"
@@ -287,7 +287,7 @@ export default {
       setTimeout(() => loading.close(), time)
     },
     handleSizeChange (psize) {
-      this.openFullScreen(800)
+      this.openFullScreen(500)
       this.pageSize = psize
     },
     handleCurrentChange (cpage) {

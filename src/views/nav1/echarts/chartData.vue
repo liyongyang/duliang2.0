@@ -2,7 +2,7 @@
   <div class="dailyMsg container-fluid">
     <div style="height:140px;width:1630px">
       <el-card class="box-card"
-               style="width: 180px;height:100px;float:left;margin:5px 10px"
+               style="height:90px;float:left;margin:0 10px;padding:10px"
                v-for="(item,index) in single"
                :key="item.index">
         <div class="topic">
@@ -10,8 +10,8 @@
                alt=""
                srcset="" />
           <div>
-            <p> {{index}}:</p>
-            <p>{{item}}</p>
+            <p>{{index}}:</p>
+            <h2>{{item}}</h2>
           </div>
         </div>
       </el-card>
@@ -221,8 +221,10 @@ export default {
   justify-content: space-around;
 }
 .topic > img {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  padding: 15px 0;
 }
 .box-card {
   border-radius: 8px;
